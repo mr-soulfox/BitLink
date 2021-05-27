@@ -1,0 +1,129 @@
+/*IMPORT FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/*RESET*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1.15rem;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+/*IMPORT FILE WITH COLORS*/
+/*IMPORT STYLE FILES*/
+body {
+  background-color: #FBFBFF;
+}
+
+.main-header > section {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-page > section {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logo {
+  margin: 13px;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.nav span {
+  margin: 10px;
+}
+
+.nav span > a {
+  color: #5a5e77;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.nav span > a:hover {
+  color: #44475a;
+}
+
+.nav img {
+  width: 60px;
+  margin-left: 15px;
+}
+
+.details {
+  padding: 0 130px;
+}
+
+.details > h1 {
+  margin-left: -300px;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: #6272a4;
+}
+
+.details > p {
+  font-size: 1.16rem;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 485px) {
+  .main-header > section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+  }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav > span:nth-child(3) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

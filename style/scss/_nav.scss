@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+    
+    & span {
+        margin: 10px;
+        
+        & > a {
+            color: lighten($color: $letters, $amount: 10);
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            
+            &:hover {
+                color: $letters;
+            }
+        }
+    }
+
+    & img {
+        width: 60px;
+        margin-left: 15px;
+    }
+}

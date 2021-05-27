@@ -1,0 +1,16 @@
+@media screen and (max-width: 485px) {
+    .main-header > section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+    }
+
+    .nav {
+        flex-direction: column;
+
+        & > span:nth-child(3) {
+            display: none;
+        }
+    }
+}

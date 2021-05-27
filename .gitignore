@@ -1,0 +1,6 @@
+#Folders
+backend
+
+#Files
+.env
+*.txt
