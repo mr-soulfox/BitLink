@@ -1,15 +1,26 @@
 .details {
-    padding: 0 130px;
+    margin: 60px;
 
     & > h1 {
-        margin-left: -300px;
         font-size: 1.9rem;
         margin-bottom: 15px;
-        color:  $titles;
+        color: $titles;
     }
 
     & > p {
-        font-size: 1.16rem;
+        width: 500px;
+        font-size: 1.19rem;
+        font-weight: 500;
         margin-bottom: 30px;
+        color: $letters;
+
+        & a {
+            color: darken($color: $titles, $amount: 5);
+            font-weight: 700;
+
+            &:hover {
+                color: $titles;
+            }
+        }
     }
 }

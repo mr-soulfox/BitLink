@@ -1,5 +1,6 @@
 body {
     background-color: $background;
+    overflow-x: hidden;
 }
 
 .main-header > section {
@@ -13,6 +14,8 @@ body {
 
 .main-page > section {
     width: 100%;
-    text-align: center;
     margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

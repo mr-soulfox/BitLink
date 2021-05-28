@@ -7,6 +7,9 @@
     <title>Bit link</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="./style/main.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- HEADER-MENU -->
@@ -23,7 +26,7 @@
             <nav>
                 <div class="nav">
                     <span>
-                        <a href="#">
+                        <a href="#features">
                             Recursos
                         </a>
                     </span>
@@ -35,13 +38,13 @@
                     </span>
 
                     <span>
-                        <a href="./pages/links.html">
+                        <a href="#links">
                             Links
                         </a>
                     </span>
 
                     <span>
-                        <a href="#" target="_blank">
+                        <a href="https://github.com/mr-soulfox/BitLink" target="_blank">
                             <img src="./assets/icons/github.svg" alt="Repository">
                         </a>
                     </span>
@@ -59,14 +62,24 @@
                 <p>
                     O encurtador de links BIT, é uma ferramenta gratuita e de codigo aberto para encurtar seus links.
                     Use o nosso encurtador de link para diminuir um link longo e gerar um link curto. 
-                    Se precisar acompanhar e analisar os acessos nos seus links, procure por eles <strong><a href="./pages/links.html">AQUI</a></strong>.
+                    Se precisar acompanhar e analisar os acessos nos seus links, procure por eles <strong><a href="#links">AQUI</a></strong>.
                 </p>
             </div>
     
             <!-- SHORTENER  -->
-            <div>
-                <input type="url" name="link" id="short" placeholder="Insira o link aqui.">
-                <button onclick="alert('Work in progress.')">Encurtar</button>
+            <div class="shortener">
+                <div>
+                    <input type="text" name="link" id="shortInput" placeholder="Insira o link aqui" spellcheck="false" autocomplete="off">
+                    <button onclick="alert('Work in progress.')">Encurtar</button>
+                </div>
+
+                <!-- RESULT LOCAL -->
+                <div class="result-local">
+                    <span id="shortLink"><!-- SHORT LINK --></span>
+                    <!-- add loading via js, <img src="./assets/animated/loading.svg" alt="loading" width="30px"> depois mudar pra url-->
+                </div>
+
+                <small class="log"><!-- STATUS LOG --></small>
             </div>
         </section>
     </main>

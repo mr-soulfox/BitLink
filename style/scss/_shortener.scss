@@ -1,0 +1,57 @@
+.shortener {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: $shortener;
+    border-radius: 6px 0 0 6px;
+
+    & div:nth-child(1) {
+        margin-bottom: 20px;
+
+        & > input[type="text"] {
+            width: 60%;
+            height: 50px;
+            font-weight: 500;
+            padding: 5px;
+            border: none;
+            border-radius: 6px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & > button {
+            height: 50px;
+            padding: 10px;
+            background-color: darken($color: $button, $amount: 10);
+            border: none;
+            border-radius: 3px;
+            color: $letters;
+            font-weight: 700;
+            cursor: pointer;
+            transition-duration: 0.25s;
+
+            &:hover {
+                background-color: darken($color: $button, $amount: 20)
+            }
+        }
+    }
+
+    .result-local {
+        color: #f8f8f2;
+        font-weight: 700;
+
+        & > span {
+            font-size: 1.5rem;
+        }
+    }
+
+    .log {
+        margin-top: 90px;
+        color: #50fa7b;
+    }
+}

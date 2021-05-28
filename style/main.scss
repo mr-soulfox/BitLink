@@ -11,6 +11,18 @@
     text-decoration: none;
 }
 
+/*SCROLL STYLE*/
+::-webkit-scrollbar {
+    width: 10px;
+} 
+::-webkit-scrollbar-track {
+    background-color: darken($color: #003153, $amount: 5);
+} 
+::-webkit-scrollbar-thumb {
+    background-color: lighten($color: #003053, $amount: 70);
+    border-radius: 10px;
+}
+
 /*IMPORT FILE WITH COLORS*/
 @import './colors/colors';
 
@@ -19,4 +31,5 @@
 @import './scss/logo';
 @import './scss/nav';
 @import './scss/details';
+@import './scss/shortener';
 @import './scss/querie';
