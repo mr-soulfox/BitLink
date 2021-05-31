@@ -8,8 +8,18 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="./style/main.css">
 
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- LIB QRCODE.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous">
+    </script>
+
 </head>
 <body>
     <!-- HEADER-MENU -->
@@ -70,18 +80,38 @@
             <div class="shortener">
                 <div>
                     <input type="text" name="link" id="shortInput" placeholder="Insira o link aqui" spellcheck="false" autocomplete="off">
-                    <button onclick="alert('Work in progress.')">Encurtar</button>
+                    <button onclick="shortener()">Encurtar</button>
+                    <button onclick="qrCode()">Gerar QRCode</button>
                 </div>
 
                 <!-- RESULT LOCAL -->
-                <div class="result-local">
+                <div class="result-local" id="resultLocal">
                     <span id="shortLink"><!-- SHORT LINK --></span>
                     <!-- add loading via js, <img src="./assets/animated/loading.svg" alt="loading" width="30px"> depois mudar pra url-->
                 </div>
 
-                <small class="log"><!-- STATUS LOG --></small>
+                <small class="log" id="log"><!-- STATUS LOG --></small>
             </div>
         </section>
     </main>
+
+    <aside class="modal-container" id="modalContainer">
+        <!-- QRCODE MODAL -->
+        <div class="qrcode-modal" id="qrcodeModal">
+            <img src="./assets/icons/close.svg" alt="close" id="close">
+
+            <span>Seu QRCode</span>
+            
+            <div id="qrcode">
+                <!-- ADD QRCODE -->
+            </div>
+
+            <img src="./assets/icons/download.svg" alt="download" id="download" onclick="download()"></img>
+        </div>
+    </aside>
+
+    <script src="./js/shortener.js"></script>
+    <script src="./js/genCode.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

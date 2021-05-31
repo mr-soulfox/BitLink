@@ -26,6 +26,54 @@
 }
 
 /*IMPORT FILE WITH COLORS*/
+/*IMPORT ANIMATION FILE*/
+@-webkit-keyframes modal {
+  from {
+    top: -10px;
+    opacity: 0;
+  }
+  to {
+    top: 200px;
+    opacity: 1;
+  }
+}
+@keyframes modal {
+  from {
+    top: -10px;
+    opacity: 0;
+  }
+  to {
+    top: 200px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes close {
+  to {
+    top: -10px;
+    display: none;
+  }
+}
+
+@keyframes close {
+  to {
+    top: -10px;
+    display: none;
+  }
+}
+
+@-webkit-keyframes asideModal {
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes asideModal {
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
 /*IMPORT STYLE FILES*/
 body {
   background-color: #FBFBFF;
@@ -61,6 +109,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -199,8 +262,64 @@ body {
 }
 
 .shortener .log {
-  margin-top: 90px;
-  color: #50fa7b;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.qrcode-modal {
+  width: 300px;
+  height: 350px;
+  padding: 10px;
+  background-color: #44475a;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  top: -10px;
+  opacity: 0;
+}
+
+.qrcode-modal > #close {
+  width: 50px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: #f8f8f2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.qrcode-modal > span {
+  color: #929dc0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.qrcode-modal > #qrcode {
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+  border: 3px solid #282a36;
+  padding: 5px;
+  background-color: #FBFBFF;
+}
+
+.qrcode-modal > #download {
+  width: 60px;
+  cursor: pointer;
+  margin: 6px;
 }
 
 @media screen and (max-width: 485px) {

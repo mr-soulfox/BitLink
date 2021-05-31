@@ -1,0 +1,23 @@
+@keyframes modal {
+    from {
+        top: -10px;
+        opacity: 0;
+    }
+    to {
+        top: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    to {
+        top: -10px;
+        display: none;
+    }
+}
+
+@keyframes asideModal {
+    to {
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+}

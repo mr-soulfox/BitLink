@@ -26,10 +26,15 @@
 /*IMPORT FILE WITH COLORS*/
 @import './colors/colors';
 
+/*IMPORT ANIMATION FILE*/
+@import './scss/anim';
+
 /*IMPORT STYLE FILES*/
 @import './scss/body';
 @import './scss/logo';
 @import './scss/nav';
 @import './scss/details';
 @import './scss/shortener';
+@import './scss/qrcode';
 @import './scss/querie';
+
