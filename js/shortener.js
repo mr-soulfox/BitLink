@@ -5,6 +5,8 @@ function shortener() {
     if (input.value != '') {
         
         let resultLocal = document.querySelector('#resultLocal')
+        let shortLink = document.getElementById('shortLink')
+        shortLink.innerHTML = ''
 
         //Create loading
         let elementLoad = document.createElement('img')
@@ -14,7 +16,12 @@ function shortener() {
         //Add element on result local
         resultLocal.appendChild(elementLoad)
 
-        setInterval(() => resultLocal.removeChild(elementLoad), 3000)
+        setInterval(() => {
+            resultLocal.removeChild(elementLoad)
+            shortLink.innerHTML = 'Em construção.'
+        
+        }, 1000)
+
 
         const log = document.querySelector('#log')
         log.innerHTML = 'Novo link criado.'

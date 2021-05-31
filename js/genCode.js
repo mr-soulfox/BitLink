@@ -32,7 +32,6 @@ function qrCode() {
 
     }
 
-
 }
 
 function genCode(value, local) {
