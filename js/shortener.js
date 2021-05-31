@@ -16,9 +16,9 @@ function shortener() {
         //Add element on result local
         resultLocal.appendChild(elementLoad)
 
-        setInterval(() => {
+        setTimeout(() => {
             resultLocal.removeChild(elementLoad)
-            shortLink.innerHTML = 'Em construção.'
+            shortLink.innerHTML = 'Em construção'
         
         }, 1000)
 
