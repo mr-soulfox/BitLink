@@ -3,8 +3,10 @@ function qrCode() {
     let value = input.value
     input.value = ''
 
+    const log = document.querySelector('#log').innerHTML = ''
+    document.querySelector('#shortLink').innerHTML = ''
+
     if (value != '') {
-        const log = document.querySelector('#log').innerHTML = ''
 
         let modalContainer = document.querySelector('#modalContainer')
         modalContainer.style.display = 'flex'

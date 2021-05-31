@@ -9,6 +9,8 @@
     font-size: 1.15rem;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
 }
 
 /*SCROLL STYLE*/
@@ -35,6 +37,7 @@
 @import './scss/nav';
 @import './scss/details';
 @import './scss/shortener';
+@import './scss/features';
 @import './scss/qrcode';
 @import './scss/querie';
 

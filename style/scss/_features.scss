@@ -1,0 +1,28 @@
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & div {
+        width: 200px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    & div > img {
+        width: 90px;
+    }
+
+    & div > h3 {
+        margin-bottom: 15px;
+        color: $titles;
+    }
+
+    & div > span {
+        color: $letters;
+    }
+}

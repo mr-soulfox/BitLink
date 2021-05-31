@@ -80,6 +80,7 @@
             <div class="shortener">
                 <div>
                     <input type="text" name="link" id="shortInput" placeholder="Insira o link aqui" spellcheck="false" autocomplete="off">
+                    
                     <button onclick="shortener()">Encurtar</button>
                     <button onclick="qrCode()">Gerar QRCode</button>
                 </div>
@@ -92,7 +93,65 @@
                 <small class="log" id="log"><!-- STATUS LOG --></small>
             </div>
         </section>
+
+        <section id="features">
+            <div class="features">
+                <div>
+                    <img src="./assets/icons/link.svg" alt="Link icon">
+                    <h3>CURTO</h3>
+                    <span>
+                        Encurte links de qualquer tamanho com o encurtador ou o gerador de QRCode.
+                    </span>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/free.svg" alt="free icon">
+                    <h3>GRATIS</h3>
+                    <span>
+                        Crie quantos links encurtados ou QRCodes quiser e compartilhe
+                    </span>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/security.svg" alt="security icon">
+                    <h3>SEGURO</h3>
+                    <span>
+                        Temos o SSL ativado que mantem os dados criptografados
+                    </span>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/statistics.svg" alt="statistics icon">
+                    <h3>ESTATISTICAS</h3>
+                    <span>
+                        Veja as estatisticas de links de qualquer url encurtada que esteja publica
+                    </span>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/responsive.svg" alt="responsive icon">
+                    <h3>RESPONSIVO</h3>
+                    <span>
+                        Compativel com mobile e desktop
+                    </span>
+                </div>
+
+                <div>
+                    <img src="./assets/icons/api.png" alt="api icon">
+                    <h3>API</h3>
+                    <span>
+                        Use nossa API gratis para fazer o seu propio encurtador
+                    </span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <section class="footer-page">
+            <span>&copy; Bit - Ferramenta para encurtar links longos</span>
+        </section>
+    </footer>
 
     <aside class="modal-container" id="modalContainer">
         <!-- QRCODE MODAL -->

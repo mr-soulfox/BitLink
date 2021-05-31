@@ -8,11 +8,12 @@
     }
 
     & > p {
-        width: 500px;
+        max-width: 500px;
         font-size: 1.19rem;
         font-weight: 500;
         margin-bottom: 30px;
         color: $letters;
+        word-break: break-word;
 
         & a {
             color: darken($color: $titles, $amount: 5);

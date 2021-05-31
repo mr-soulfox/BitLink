@@ -1,10 +1,12 @@
 .shortener {
     width: 100%;
+    max-width: 900px;
     height: 240px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    margin-left: auto;
     background-color: $shortener;
     border-radius: 6px 0 0 6px;
 
@@ -23,7 +25,7 @@
                 outline: none;
             }
         }
-
+        
         & > button {
             height: 50px;
             padding: 10px;
@@ -33,6 +35,7 @@
             color: $letters;
             font-weight: 700;
             cursor: pointer;
+            margin-top: 6px;
             transition-duration: 0.25s;
 
             &:hover {

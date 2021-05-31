@@ -3,14 +3,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: fixed;
+    }
+    
+    .logo {
+        margin: -3px;
     }
 
     .nav {
         flex-direction: column;
-
-        & > span:nth-child(3) {
-            display: none;
-        }
+        left: 0;
+        margin-right: 0;
+        order: reverse;
+        margin-bottom: -100px;
     }
 }
