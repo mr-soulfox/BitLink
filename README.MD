@@ -3,10 +3,10 @@
     <h1 style="font-size: 4rem; font-weight: 600;">BIT</h1>
 </div>  
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/05a489b2-0c2d-4ba5-8ff1-03a90cc31d58/deploy-status)](https://app.netlify.com/sites/bitlink/deploys)
+
 <p align="center">
     🩳Encurtador de links e gerador de QRCodes🩳
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/05a489b2-0c2d-4ba5-8ff1-03a90cc31d58/deploy-status)](https://app.netlify.com/sites/bitlink/deploys)
 </p>
 <br/>
 
@@ -16,7 +16,7 @@
 <br/>
 
 ### 👨‍💻 Features
-[x] - Gerador de QRCodes <br/>
+[X] - Gerador de QRCodes <br/>
 [ ] - Encurtar links <br/>
 [ ] - Tradução <br/>
 <br/>
