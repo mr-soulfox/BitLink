@@ -33,5 +33,13 @@
 
 <img src="https://github.com/mr-soulfox.png" width="110px">
 
-## Marcos Paulo
+## Marcos Paulo🦊
 Feito com 🧡 por Marcos Paulo
+
+
+# Contribuidor
+
+<img src="https://github.com/pietrodessotti.png" width="110px">
+
+## Pietro dessoti 👨‍⚕️
+Ajudou a resolver um bug no modal
