@@ -42,7 +42,7 @@
                     </span>
 
                     <span>
-                        <a href="#links">
+                        <a onclick="window.open()">
                             Links
                         </a>
                     </span>
@@ -150,7 +150,7 @@
     <aside class="modal-container" id="modalContainer">
         <!-- QRCODE MODAL -->
         <div class="qrcode-modal" id="qrcodeModal">
-            <img src="./assets/icons/close.svg" alt="close" id="close">
+            <img src="./assets/icons/close.svg" alt="close" class="close" id="codeModalClose" onclick="window.close('qrcode')">
 
             <span>Seu QRCode</span>
             
@@ -158,7 +158,13 @@
                 <!-- ADD QRCODE -->
             </div>
 
-            <img src="./assets/icons/download.svg" alt="download" id="download" onclick="download()"></img>
+            <img src="./assets/icons/download.svg" alt="download" id="download" onclick="download()" title="Baixar imagem"></img>
+        </div>
+
+        <!-- LINK MODAL -->
+        <div class="link-modal" id="linkModal">
+            <img src="./assets/icons/close.svg" alt="close" class="close" id="linkModalClose" onclick="window.close('link')">
+            
         </div>
     </aside>
 

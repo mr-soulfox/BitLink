@@ -16,9 +16,10 @@
 <br/>
 
 ### 👨‍💻 Features
-[X] - Gerador de QRCodes <br/>
-[ ] - Encurtar links <br/>
-[ ] - Tradução <br/>
+- [x] - Gerador de QRCodes <br/>
+- [ ] - Encurtar links <br/>
+- [ ] - Tradução <br/>
+- [ ] - Links privados <br/>
 <br/>
 
 ### 🧰 Tecnologias
