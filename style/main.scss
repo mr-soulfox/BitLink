@@ -31,7 +31,7 @@
 /*IMPORT ANIMATION FILE*/
 @import './scss/anim';
 
-/*IMPORT STYLE FILES*/
+/*IMPORT STYLE FILES (index.html)*/
 @import './scss/body';
 @import './scss/logo';
 @import './scss/nav';
@@ -41,3 +41,5 @@
 @import './scss/qrcode';
 @import './scss/querie';
 
+/*IMPORT STYLE FILES (pages/about.html)*/
+@import './scss/about/text';
