@@ -1,4 +1,4 @@
-function close(id) {
+function closeModal(id) {
     if (id == "qrcode") {        
         document.querySelector('#qrcodeModal').style.animation = "close 0.45s"
         document.querySelector('#qrcode').innerHTML = ''
@@ -6,11 +6,12 @@ function close(id) {
 
     } else if (id == "link") {
         document.querySelector('#linkModal').style.animation = 'close 0.45s'
+        document.querySelector('#linkModal').style.display = 'none'
         document.querySelector('#modalContainer').style.display = 'none'
     }
 }
 
-function open() {
+function openModal() {
     let modalContainer = document.querySelector('#modalContainer')
     modalContainer.style.display = 'flex'
     modalContainer.style.animation = 'asideModal 0.50s ease-in-out both'

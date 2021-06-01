@@ -42,7 +42,7 @@
                     </span>
 
                     <span>
-                        <a onclick="window.open()">
+                        <a onclick="openModal()">
                             Links
                         </a>
                     </span>
@@ -66,7 +66,7 @@
                 <p>
                     O encurtador de links BIT, é uma ferramenta gratuita e de codigo aberto para encurtar seus links.
                     Use o nosso encurtador de link para diminuir um link longo e gerar um link curto. 
-                    Se precisar acompanhar e analisar os acessos nos seus links, procure por eles <strong><a href="#links">AQUI</a></strong>.
+                    Se precisar acompanhar e analisar os acessos nos seus links, procure por eles <strong><a onclick="openModal()">AQUI</a></strong>.
                 </p>
             </div>
     
@@ -150,7 +150,7 @@
     <aside class="modal-container" id="modalContainer">
         <!-- QRCODE MODAL -->
         <div class="qrcode-modal" id="qrcodeModal">
-            <img src="./assets/icons/close.svg" alt="close" class="close" id="codeModalClose" onclick="window.close('qrcode')">
+            <img src="./assets/icons/close.svg" alt="close" class="close" id="codeModalClose" onclick="closeModal('qrcode')">
 
             <span>Seu QRCode</span>
             
@@ -163,7 +163,7 @@
 
         <!-- LINK MODAL -->
         <div class="link-modal" id="linkModal">
-            <img src="./assets/icons/close.svg" alt="close" class="close" id="linkModalClose" onclick="window.close('link')">
+            <img src="./assets/icons/close.svg" alt="close" class="close" id="linkModalClose" onclick="closeModal('link')">
             
         </div>
     </aside>
