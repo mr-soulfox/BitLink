@@ -41,13 +41,13 @@ function genCode(value, local) {
     local.innerHTML = ''
 
     let qrcode = new QRCode(local, {
-        text: value,
-        width: 190,
-        height: 190,
-        colorDark: '#282a36',
+        width: 200,
+        height: 200,
+        colorDark: '#44475a',
         colorLight: '#f8f8f2',
         correctLevel: QRCode.CorrectLevel.H
     })
+    qrcode.makeCode(value)
 }
 
 function download() {
