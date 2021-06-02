@@ -1,5 +1,0 @@
-## This rule redirect to html page with function to redirect for original link
-[[redirects]]
-from = "/*"
-to = "/pages/redirect.html"
-status = 301
