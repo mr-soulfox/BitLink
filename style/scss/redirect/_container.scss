@@ -1,0 +1,16 @@
+.load-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+
+    & > span {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: lighten($color: $letters, $amount: 20);
+    }
+
+    & > div {
+        width: 200px;
+    }
+}
