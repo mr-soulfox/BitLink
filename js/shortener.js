@@ -1,4 +1,4 @@
-function shortener() {
+async function shortener() {
     const input = document.querySelector('#shortInput')
     document.querySelector('#log').innerHTML = ''
 
@@ -16,16 +16,25 @@ function shortener() {
         //Add element on result local
         resultLocal.appendChild(elementLoad)
 
-        setTimeout(() => {
+        let data = await verifyUrl(input.value)
+        console.log(data)
+
+        if (data.isUrl == true) {
             resultLocal.removeChild(elementLoad)
-            shortLink.innerHTML = 'Em construção'
-        
-        }, 1000)
+            
+            resultLocal.innerHTML = '<span id="shortLink">Em construção</span>'
 
-
-        const log = document.querySelector('#log')
-        log.innerHTML = 'Novo link criado.'
-        log.style.color = '#50fa7b'
+            const log = document.querySelector('#log')
+            log.innerHTML = 'Novo link criado.'
+            log.style.color = '#50fa7b'
+            
+        } else {
+            resultLocal.removeChild(elementLoad)
+            
+            const log = document.querySelector('#log')
+            log.innerHTML = 'Link incorreto.'
+            log.style.color = '#ff5555'
+        }  
         
     } else {
         
@@ -34,4 +43,21 @@ function shortener() {
         log.style.color = '#ff5555'
 
     }
+}
+
+async function verifyUrl(url) {
+    const encodingUrl = encodeURIComponent(url)
+    console.log(encodingUrl)
+
+    try {
+        const response = await fetch(`https://bitil.herokuapp.com/verify?url=${encodingUrl}`)
+        const data = await response.json()
+
+        return data
+
+    } catch (error) {
+        console.log('Deu erro')
+
+    }
+
 }
