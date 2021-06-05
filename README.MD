@@ -17,7 +17,8 @@
 
 ### 👨‍💻 Features
 - [x] - Gerador de QRCodes <br/>
-- [ ] - Api completa <br/>
+- [x] - Redirecionamento <br/>
+- [x] - Api completa <br/>
 - [ ] - Tradução <br/>
 <br/>
 
