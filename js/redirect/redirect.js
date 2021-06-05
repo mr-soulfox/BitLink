@@ -1,6 +1,4 @@
 async function redirect() {
-    alert('Em construção')
-
     let id = document.location.search
     id = id.split('=')
     id = id[1]
