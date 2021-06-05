@@ -2,7 +2,8 @@ async function redirect() {
     alert('Em construção')
 
     let id = document.location.search
-    console.log(id)
+    id = id.split('=')
+    id = id[1]
 
     if (id.length == 5) {
         let data = await getOriginalLink(id)
@@ -10,8 +11,7 @@ async function redirect() {
         document.location.replace(data.link)
 
     } else {
-        //document.location.replace('/')
-        alert('id incorreto')
+        document.location.replace('/')
 
     }
 
@@ -27,7 +27,7 @@ async function getOriginalLink(id) {
         return data
 
     } catch (error) {
-        console.log('Deu erro')
+        console.log('Internal error')
 
     }
 }

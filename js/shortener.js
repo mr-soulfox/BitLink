@@ -56,7 +56,7 @@ async function verifyUrl(url) {
         return data
 
     } catch (error) {
-        console.log('Deu erro')
+        console.log('Internal error')
 
     }
 
