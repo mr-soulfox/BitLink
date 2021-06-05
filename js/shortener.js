@@ -16,17 +16,36 @@ async function shortener() {
         //Add element on result local
         resultLocal.appendChild(elementLoad)
 
-        let data = await verifyUrl(input.value)
+        let inputValue = input.value
+
+        if (inputValue.search('https://') == -1) {
+            inputValue = 'https://' + inputValue
+
+        }
+
+        let data = await verifyUrl(inputValue)
         console.log(data)
 
         if (data.isUrl == true) {
-            resultLocal.removeChild(elementLoad)
-            
-            resultLocal.innerHTML = '<span id="shortLink">Em construção</span>'
+            const created = await createUrl(inputValue)
+            console.log(created)
 
-            const log = document.querySelector('#log')
-            log.innerHTML = 'Novo link criado.'
-            log.style.color = '#50fa7b'
+            resultLocal.removeChild(elementLoad)
+            resultLocal.innerHTML = `<span id="shortLink">${created.link}</span>`
+
+            if (created.exist == true) {
+                const log = document.querySelector('#log')
+                log.innerHTML = 'Link já existe.'
+                log.style.color = '#50fa7b'
+
+            } else {
+                const log = document.querySelector('#log')
+                log.innerHTML = 'Novo link criado.'
+                log.style.color = '#50fa7b'
+
+            }
+
+
             
         } else {
             resultLocal.removeChild(elementLoad)
@@ -47,7 +66,6 @@ async function shortener() {
 
 async function verifyUrl(url) {
     const encodingUrl = encodeURIComponent(url)
-    console.log(encodingUrl)
 
     try {
         const response = await fetch(`https://bitil.herokuapp.com/verify?url=${encodingUrl}`)
@@ -60,4 +78,34 @@ async function verifyUrl(url) {
 
     }
 
+}
+
+async function createUrl(url) {
+    let json = {
+        link: url
+    }
+
+    console.log(url)
+
+    const options = {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'default',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(json)
+    }
+
+    try {
+        const res = await fetch('https://bitil.herokuapp.com/save/public', options)  
+        const data = await res.json() 
+        
+        return data
+
+    } catch (err) {
+        console.log('Internal error')
+
+    }
+    
 }
