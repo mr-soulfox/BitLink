@@ -1,2 +1,2 @@
 # Redirect to html page with function for consult API
-/:id /pages/redirect.html id=:id 301
+/* /pages/redirect.html?id=:splat 301
