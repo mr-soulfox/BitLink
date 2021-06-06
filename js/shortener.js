@@ -18,17 +18,15 @@ async function shortener() {
 
         let inputValue = input.value
 
-        if (inputValue.search('https://') == -1) {
+        if (inputValue.search('https://') == -1 && inputValue.search('http://') == -1) {
             inputValue = 'https://' + inputValue
 
         }
 
         let data = await verifyUrl(inputValue)
-        console.log(data)
 
         if (data.isUrl == true) {
             const created = await createUrl(inputValue)
-            console.log(created)
 
             resultLocal.removeChild(elementLoad)
             resultLocal.innerHTML = `<span id="shortLink">${created.link}</span>`
@@ -84,8 +82,6 @@ async function createUrl(url) {
     let json = {
         link: url
     }
-
-    console.log(url)
 
     const options = {
         method: 'POST',

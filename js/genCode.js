@@ -1,38 +1,72 @@
-function qrCode() {
+async function qrCode() {    
     let input = document.getElementById('shortInput')
     let value = input.value
-    input.value = ''
 
-    const log = document.querySelector('#log').innerHTML = ''
+    let resultLocal = document.querySelector('#resultLocal')
+   
+    //Create loading
+    let elementLoad = document.createElement('img')
+    elementLoad.setAttribute('src', '/assets/animated/loading.svg')
+    elementLoad.setAttribute('width', '30px')
+    resultLocal.appendChild(elementLoad)
+
+    if (value.search('https://') == -1 && value.search('http://') == -1) {
+        value = 'https://' + value
+        
+    }
+
+    if (value.length >= 1000) {
+        const created = await window.createUrl(value)
+        value = created.link
+
+    }
+
+    const log = document.querySelector('#log')
+    log.innerHTML = ''
+    
     document.querySelector('#shortLink').innerHTML = ''
 
-    if (value != '') {
+    const data = await window.verifyUrl(value)
 
-        let modalContainer = document.querySelector('#modalContainer')
-        modalContainer.style.display = 'flex'
-        modalContainer.style.animation = 'asideModal 0.50s ease-in-out both'
+    if (data.isUrl == true) {
+        input.value = ''
+        resultLocal.removeChild(elementLoad)
     
-        document.querySelector('#qrcodeModal').style.animation = "modal 0.45s ease-in-out both"
-        
-        let qrcode = document.querySelector('#qrcode')
-        
-        //Create loading
-        let elementLoad = document.createElement('img')
-        elementLoad.setAttribute('src', '/assets/animated/loading.svg')
-        elementLoad.setAttribute('width', '90px')
+        if (value != '') {
     
-        //Add element on qrcode local
-        qrcode.appendChild(elementLoad)
-    
-        setTimeout(() => genCode(value, qrcode), 500)
+            let modalContainer = document.querySelector('#modalContainer')
+            modalContainer.style.display = 'flex'
+            modalContainer.style.animation = 'asideModal 0.50s ease-in-out both'
         
+            document.querySelector('#qrcodeModal').style.animation = "modal 0.45s ease-in-out both"
+            
+            let qrcode = document.querySelector('#qrcode')
+            
+            //Create loading
+            let elementLoad = document.createElement('img')
+            elementLoad.setAttribute('src', '/assets/animated/loading.svg')
+            elementLoad.setAttribute('width', '90px')
+        
+            //Add element on qrcode local
+            qrcode.appendChild(elementLoad)
+        
+            setTimeout(() => genCode(value, qrcode), 500)
+            
+        } else {
+
+            log.innerHTML = 'Link incorreto.'
+            log.style.color = '#ff5555'
+    
+        }
+
     } else {
+        resultLocal.removeChild(elementLoad)
 
-        const log = document.querySelector('#log')
         log.innerHTML = 'Link incorreto.'
         log.style.color = '#ff5555'
 
     }
+
 
 }
 
