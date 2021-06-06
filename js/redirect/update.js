@@ -27,7 +27,6 @@ async function update() {
         try {
             const res = await fetch(`https://bitil.herokuapp.com/update/${id}`, options)  
             const data = await res.json() 
-            console.log(data)
 
             if (data.sucess == true) {
                 const lastCode = storage.getItem('code')
