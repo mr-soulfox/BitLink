@@ -26,3 +26,31 @@
     color: titles;
     overflow: hidden;
 }
+
+.search-local {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > input {
+        min-width: 100px;
+    }
+
+    & > button {
+        margin: 15px;
+        height: 50px;
+        padding: 10px;
+        background-color: darken($color: $button, $amount: 10);
+        border: none;
+        border-radius: 3px;
+        color: $letters;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 6px;
+        transition-duration: 0.25s;   
+
+        &:hover {
+            background-color: darken($color: $button, $amount: 20)
+        }
+    }
+}
