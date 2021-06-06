@@ -182,11 +182,18 @@
         <div class="link-modal" id="linkModal">
             <img src="./assets/icons/close.svg" alt="close" class="close" id="linkModalClose" onclick="closeModal('link')">
             
+            <input type="text" name="search" id="searchLink" class="search" placeholder="Insira o link encurtado aqui"  spellcheck="false" autocomplete="off">
+
+            <div class="search-result" id="searchResult">
+                <!-- RESULT HERE -->
+            </div>
+
         </div>
     </aside>
 
     <script src="./js/shortener.js"></script>
     <script src="./js/genCode.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/link.js"></script>
 </body>
 </html>

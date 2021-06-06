@@ -21,3 +21,12 @@
         background-color: rgba(0, 0, 0, 0.4)
     }
 }
+
+@keyframes openSearch {
+    from {
+        height: 1%;
+    }
+    to {
+        height: 85%;
+    }
+}
