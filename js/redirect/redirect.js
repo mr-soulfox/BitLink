@@ -3,10 +3,17 @@ async function redirect() {
     id = id.split('=')
     id = id[1]
 
-    if (id.length == 5) {
-        let data = await getOriginalLink(id)
+    let link = storage.getItem(id)
     
+    if (id.length == 5 && link == null) {
+        let data = await getOriginalLink(id)
+        
+        storage.setItem(id, data.link)
+        
         document.location.replace(data.link)
+        
+    } else if (id.length == 5 && link != null) {
+        document.location.replace(link)
 
     } else {
         document.location.replace('/')

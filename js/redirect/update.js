@@ -9,6 +9,9 @@ async function update() {
     let clicks = storage.getItem('code')
     let exist = false
 
+    //verify cache
+    let link = storage.getItem(id)
+
     try {
         exist = clicks.search(id) == -1
 
@@ -17,7 +20,7 @@ async function update() {
 
     }
 
-    if (id.length == 5 && exist) {
+    if (id.length == 5 && exist && link == null) {
         const options = {
             method: 'PUT',
             mode: 'cors',
@@ -28,7 +31,7 @@ async function update() {
             const res = await fetch(`https://bitil.herokuapp.com/update/${id}`, options)  
             const data = await res.json() 
 
-            if (data.sucess == true) {
+            if (data.success == true) {
                 const lastCode = storage.getItem('code')
                 storage.setItem('code', `${lastCode}, ${data.id}`)
 
