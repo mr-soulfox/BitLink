@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "name": "Bit link",
+    "description": "A tool to generate QRCodes or shorten links of any size",
+    "author": "Mr.soulfox - github",
+    "action": {
+        "default_title": "Bit link",
+        "default_popup": "index.html",
+        "default_icon": "./assets/favicon.png"
+    }
+}

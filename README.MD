@@ -19,6 +19,7 @@
 - [x] - Gerador de QRCodes <br/>
 - [x] - Redirecionamento <br/>
 - [x] - Api completa <br/>
+- [ ] - Extensão para o browser <br/>
 - [ ] - Tradução <br/>
 <br/>
 
