@@ -2,7 +2,7 @@ async function shortener() {
     const input = document.querySelector('#shortInput')
     document.querySelector('#log').innerHTML = ''
 
-    if (input.value != '') {
+    if (input.value != '' && (input.value).search(document.location.hostname) == -1) {
         
         let resultLocal = document.querySelector('#resultLocal')
         let shortLink = document.getElementById('shortLink')
