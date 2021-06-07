@@ -1,2 +1,5 @@
 # Redirect to html page with function for consult API
 /*  /pages/redirect.html?id=:splat  301
+
+# Exit extesion path
+/extesion / 301
