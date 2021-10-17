@@ -10,17 +10,10 @@
 </p>
 <br/>
 
-<h4 align="center">
-    👷Projeto ainda em construção👷
-</h4>
-<br/>
-
 ### 👨‍💻 Features
 - [x] - Gerador de QRCodes <br/>
 - [x] - Redirecionamento <br/>
 - [x] - Api completa <br/>
-- [ ] - Extensão para o browser <br/>
-- [ ] - Tradução <br/>
 <br/>
 
 ### 🧰 Tecnologias
